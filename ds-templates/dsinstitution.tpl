@@ -1,0 +1,1 @@
+<div class="institution">{$institution}</div>

@@ -1,0 +1,1 @@
+<div class="footer_left">Created: {$date}</div><div class="barCode"><img src="{$barCode}" /></div><div class="footer_right">{$pdfPages} {$PAGENO} {$pageOf} {$nbpg}</div>

@@ -1,0 +1,1 @@
+<p class="domain"><span class="email">{$email}</span>{$domain}</p>

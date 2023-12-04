@@ -1,0 +1,350 @@
+body {
+	margin: 10px;
+}
+
+h4 {
+	font-size: 24pt;
+	/* Wielkość czcionki dla nagłówków h1 */
+}
+
+p {
+	font-size: 17pt;
+	line-height: 1.5;
+	color: #4d545c;
+	/* Wielkość czcionki dla akapitów */
+}
+
+.pad {
+	margin-top: 20px;
+	width: 100%;
+	height: 1px
+}
+
+.img-top-left {
+	position: absolute;
+	float: left;
+	left: 40;
+	top: 10;
+	bottom: 0;
+}
+
+.img-top-right {
+	position: absolute;
+	float: right;
+	right: 40;
+	top: 20;
+}
+
+.img-bottom-right {
+	position: absolute;
+	float: right;
+	right: 40;
+	bottom: 30;
+}
+
+.page-break-before {
+	page-break-before: always;
+}
+
+.page-break-after {
+	page-break-after: always;
+}
+
+.footer_left {
+	text-align: left;
+	font-size: 13px;
+	width: 30%;
+	position: absolute;
+	bottom: 0;
+	margin-left: 40px;
+	padding: 0;
+	left: 0;
+	float: left;
+	height: 30px;
+	color: #cfae47;
+}
+
+.barCode {
+	text-align: center;
+	width: 30%;
+	position: absolute;
+	bottom: 5;
+	margin-left: 195px;
+	padding: 0;
+	left: 0;
+	float: left;
+	height: 30px;
+}
+
+.footer_right {
+	text-align: right;
+	font-size: 13px;
+	width: 28%;
+	position: absolute;
+	bottom: 0;
+	margin-right: 40px;
+	padding: 0;
+	right: 0;
+	float: right;
+	height: 30px;
+	color: #cfae47;
+}
+
+.dsHeader {
+	text-align: center;
+	font-weight: normal;
+	font-size: 15px;
+	color: #cfae47;
+	/* Kolor linku przy najezdzie */
+}
+
+
+.footer-content {
+	text-align: right;
+	/* Wyrównanie tekstu do prawej */
+	font-size: 14px;
+	/* Wielkość tekstu, dostosuj do swoich preferencji */
+}
+
+.dateField {
+	text-align: right;
+	float: right;
+	width: 350px;
+	margin-top: 0px;
+}
+
+.dateWord {
+	font-size: 12px;
+}
+
+.dateDecimal {
+	font-size: 18px;
+}
+
+.dateLine {
+	border-bottom: 1px dotted;
+}
+
+div img {
+	margin: auto;
+}
+
+img {
+	margin: auto;
+}
+
+p {
+	margin-bottom: 16px;
+}
+
+.institution {
+	font-size: 22px;
+	color: #213c62;
+	letter-spacing: 0pt;
+	line-height: 23px;
+	width: 800px;
+	margin-top: 2px;
+	text-align: center;
+}
+
+.cytat {
+	background-color: rgba(207, 173, 71, 0.1);
+	border-radius: 10px;
+	box-sizing: border-box;
+	padding: 5px;
+	width: 100%;
+}
+
+blockquote p {
+	margin: 0;
+	padding: 5;
+}
+
+.sup {
+	vertical-align: super;
+	font-size: 80%;
+}
+
+td {
+	font-size: 32px;
+	vertical-align: top;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+a:link {
+	color: #cfae47;
+}
+
+a:hover {
+	color: #cfae47;
+	text-decoration: none;
+	/* Kolor linku przy najezdzie */
+}
+
+a {
+	text-decoration: none;
+}
+
+a:visited {
+	color: #000;
+}
+
+
+th {
+	height: 70px;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.image-wrapper {
+	flex: 0 0 100px;
+	/* Szerokość obrazka */
+	margin-right: 10px;
+}
+
+.image-wrapper img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+}
+
+.text-wrapper {
+	flex: 1;
+}
+
+p {
+	margin-bottom: 10px;
+	line-height: 1.2;
+}
+
+p a:link {
+	color: #282c32;
+}
+
+em {
+	font-style: italic;
+}
+
+.header {
+	text-align: center;
+	width: 100%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.application {
+	font-weight: bold;
+	color: #31507d;
+	font-size: 20px;
+}
+
+.appLine {
+	border-bottom: 1px double #31507d;
+}
+
+.first {
+	font-size: 17px;
+	text-align: justify;
+}
+
+.email {
+	font-size: 21px;
+	color: #213c62;
+	font-weight: bold;
+	letter-spacing: 2pt;
+}
+
+.domain {
+	letter-spacing: 2pt;
+	font-weight: bold;
+}
+
+.refers {
+	width: 100%;
+	font-size: 18px;
+	padding-top: 10px;
+}
+
+.contentTo {
+	width: 100%;
+	font-size: 18px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: justify;
+}
+
+.signature {
+	font-size: 22px;
+	color: #213c62;
+	margin-top: 20px;
+	width: 100%;
+	border-bottom: 1px dotted #cfae47;
+}
+
+.signatureEnd {
+	font-size: 18px;
+	color: rgb(207, 173, 71);
+}
+
+.instruction p {
+	font-size: 16px;
+	text-align: justify;
+}
+
+.instruction p a {
+	font-size: 16px;
+	color: #282c32;
+}
+
+.instructionHeader {
+	padding-top: 25px;
+	font-size: 20px;
+	color: #4d545c;
+}
+
+.docNumberShort {
+	padding-top: 17px;
+	float: left;
+	text-align: left;
+	width: 35%;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.docNumLine {
+	border-bottom: 1px dotted;
+}
+
+.myLink {
+	color: #282c32;
+}
+
+li,
+h1,
+h2 {
+	color: #4d545c;
+}
+
+.imgLeftTop {
+	width: 20mm;
+	height: 20mm;
+	margin: 0;
+}
+
+.imgRightTop {
+	width: 15mm;
+	height: 15mm;
+	margin: 0;
+}
+
+.imgRightBottom {
+	width: 8mm;
+	height: 8mm;
+	margin: 0;
+}

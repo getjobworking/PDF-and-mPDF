@@ -1,0 +1,1 @@
+<div class="refers">{$refersTo}</div>

@@ -1,0 +1,1 @@
+<div class="header"><span class="appLine"><span class="application">{$application}</span></span></div>

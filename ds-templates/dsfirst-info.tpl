@@ -1,0 +1,1 @@
+<p class="first">{$firstInfo}</p>

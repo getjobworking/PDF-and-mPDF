@@ -1,0 +1,32 @@
+{
+  "tempDirectory": "/temp",
+  "templateDirectory": "/ds-templates",
+  "templateCompileDirectory": "/templates_c",
+  "cssFile": "ds-css/ds.css",
+  "fontDirectory":"/fonts",
+  "fontRegular": "andada-regular.ttf",
+  "fontBold": "andada-bold.ttf",
+  "fontItalic": "andada-italic.ttf",
+  "fontBoldItalic": "andada-bolditalic.ttf",
+  "header": "The Wonderful Wizard of Oz - <a href=\"https://en.wikipedia.org/wiki/The_Wonderful_Wizard_of_Oz\" target=\"_blank\"><span class=\"myLink\">The Wizard</span></a>",
+  "applicationName": "If you want, you can use commercially.",
+  "firstInfo": "Here is my official, non-existent email address:",
+  "refersToInfo": "<b>Refers To:</b> Free commercial use for everyone, except officials and governments.:",
+  "email": "sorcerer@sorcerousdomain.pl",
+  "signature": "Sign: The Wizard of the Land of OZ.",
+  "signatureSummary": "End of formal content. Page ({PAGENO}).",
+  "longNumHeader": "The Wizard - Query.",
+  "shortNumHeader": "NR.Q.E.",
+  "institution": "PDF Application<br />not for Government<br />3 Virtual Street<br />21-369 A non-existent city<br />Poland",
+  "folderChapterPaths": {
+    "cssPath": "ds-css",
+    "imgPath": "ds-img"
+  },
+  "contentTo":"You are permitted to utilize this scripted content for commercial purposes under the condition that you are not employed by government institutions, you are not an independent official, a politician, a prosecutor, a judge, or a policeman. Additionally, you must not be involved in any capacity with government institutions, and you should refrain from acting in a manner inconsistent with the spirit of these restrictions. If you fall under any of the aforementioned categories, you are strictly prohibited from using this code under any circumstances. <br />This script was developed to address the need for justice and combat the falsification of official documents and letters sent to government agencies by Polish justice institutions. Its purpose is to raise awareness and sensitize citizens worldwide to the fact that not everything presented by governments may be accurate or truthful.<br /><br /> To minimize the possibility of counterfeit documents:</p><ul><li>Always number the pages,</li><li>Always sign each page by hand,</li><li>Always submit documents in the application journal,</li><li>Avoid registered mail as it is impossible to prove that what you sent is inside. You also won&#39;t prove that the clerk threw your letter into the trash and he can say that there was nothing inside.</li><li>Do not send correspondence from an email address that you have not officially paid for. A Polish court may tell you that it is not your email.</li><li>Never sign with just an initial.</li><li>Always use watermarks.</li></ul>",
+  "pdfPath":"generated",
+  "pdfPages":"Pages",
+  "pageOf":"of",
+  "imgRightBottom":"dtl.png",
+  "imgLeftTop":"magic.png",
+  "imgRightTop":"rtl-p.png"
+}
