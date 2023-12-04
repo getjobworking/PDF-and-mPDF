@@ -29,6 +29,10 @@ Dependencies
     Smarty: A template engine for PHP.
     Free Fonts: High-quality fonts used in document generation. (included in folder /fonts)
 
+Example PDF
+
+NR.Q.E.PAFGVSNC.04.12.2023.pdf
+
 License
 
 This project is licensed under the MIT License + NoGov - see the LICENSE.md file for details.
