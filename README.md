@@ -12,7 +12,8 @@ composer install
 Directory create: You need to create a folder: 
 - temp, 
 - templates_c, 
-- generated 
+- generated
+
 and give them write permissions via the script.
 
 Usage
