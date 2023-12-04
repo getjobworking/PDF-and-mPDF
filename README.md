@@ -7,12 +7,11 @@ A simple class along with the `index.php` file for creating official letters dir
 
 To install the necessary tools, use Composer:
 
-```bash
-
 composer install
+
 Usage
 
-    Configure the institution's name and other data in the config/config.json file.
+    Configure the institution`s name and other data in the config/config.json file.
     Run the index.php script to generate official letters with unique document numbers and barcodes.
     You can run index.php without changing anything. The configuration file contains everything you need.
     If you need to load data in html form, the file to be loaded is in the content/content.html folder.
@@ -21,8 +20,8 @@ Dependencies
 
     mPDF: A PHP library for creating PDF documents.
     Smarty: A template engine for PHP.
-    Free Fonts: High-quality fonts used in document generation.
+    Free Fonts: High-quality fonts used in document generation. (included in folder /fonts)
 
 License
 
-This project is licensed under the MIT License + NoGov- see the LICENSE.md file for details.
+This project is licensed under the MIT License + NoGov - see the LICENSE.md file for details.
