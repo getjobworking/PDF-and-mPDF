@@ -1,4 +1,5 @@
-MIT + NOGOV
+MIT + NoGov
+
 <b>Introduction</b>: In the realm of open-source development, concerns have arisen regarding the responsible and equitable use of code shared by independent developers. This discussion centers on the need for ethical considerations and the establishment of license terms that reflect the values of individual developers, especially when it comes to government entities and officials.
 
 <b>License Terms</b>: The license governing the use of open-source code plays a pivotal role in defining how the code can be utilized. In the spirit of transparency and fairness, developers are increasingly adopting the MIT License with an additional clause, hereinafter referred to as "NOGOV License." The NOGOV License expressly restricts the usage of the code by government officials and institutions, reserving the rights exclusively for non-governmental entities and individuals.
