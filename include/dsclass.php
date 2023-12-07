@@ -187,7 +187,7 @@ class dsclass
         $this->smarty->assign('PAGENO', '{PAGENO}');
         $this->smarty->assign('MDATE', $this->date);
 
-        $code = capitalFirstLetters($this->institution,6,3);
+        $code = capitalFirstLetters($this->institution,$this->count,$this->strlen);
 
         $this->docNum = $this->getNumber($code);
         $this->docNumShort = $this->getNumber($code, false);
