@@ -89,6 +89,10 @@ class dsclass
     private $subject;
 
     private $title;
+    
+    private $strlen;
+    
+    private $count;
 
     public function __construct()
     {
