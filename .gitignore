@@ -2,3 +2,6 @@ vendor
 .settings
 .buildpath
 .project
+generated
+temp
+templates_c

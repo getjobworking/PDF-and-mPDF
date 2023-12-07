@@ -425,26 +425,28 @@ function divideEmail($email)
     }
 }
 
-function capitalFirstLetters($zdanie)
+function capitalFirstLetters($zdanie,$count,$lenght)
 {
     // Usuwanie tagów HTML
     $czystyTekst = strip_tags($zdanie);
-
+    
     // Podział zdania na słowa
     $slowa = preg_split('/\s+/', $czystyTekst);
-
+    
     $wynik = '';
+    $i = 0;
     foreach ($slowa as $slowo) {
         // Pominięcie słów krótszych niż dwa znaki
-        if (mb_strlen($slowo) <= 1) {
+        if (mb_strlen($slowo) <= $lenght) {
             continue;
         }
-
         // Pobranie pierwszej litery i zamiana na dużą
         $pierwszaLitera = mb_strtoupper(mb_substr($slowo, 0, 1));
         $wynik .= $pierwszaLitera;
+        $i++;
+        if($i>=$count) return $wynik;
     }
-
+    
     return $wynik;
 }
 ?>

@@ -28,5 +28,12 @@
   "pageOf":"of",
   "imgRightBottom":"dtl.png",
   "imgLeftTop":"magic.png",
-  "imgRightTop":"rtl-p.png"
+  "imgRightTop":"rtl-p.png",
+  "author":"Autor",
+  "creator":"Creator",
+  "keywords":"keyword1,keyword2",
+  "subject":"$this->docNum",
+  "title":"Title",
+  "count":"5",
+  "strlen":"3"
 }

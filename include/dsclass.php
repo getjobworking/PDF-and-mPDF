@@ -1,8 +1,8 @@
 <?php
+
 /**
  * @author - getjobworking@gmail.com
  */
-
 class dsclass
 {
 
@@ -33,7 +33,7 @@ class dsclass
     private $templateDirectory;
 
     private $templateCompileDirectory;
-    
+
     private $fontDirectory;
 
     private $cssFile;
@@ -67,25 +67,35 @@ class dsclass
     private $shortNumHeader;
 
     private $institution;
-    
+
     private $pdfPages;
-    
+
     private $pageOf;
 
     private $folderChapterPaths = [];
-    
+
     private $imgRightBottom;
-    
+
     private $imgRightTop;
-    
+
     private $imgLeftTop;
+
+    private $author;
+
+    private $creator;
+
+    private $keywords;
+
+    private $subject;
+
+    private $title;
 
     public function __construct()
     {
         $this->loadConfig();
         $this->smarty = new Smarty();
-        $this->smarty->setTemplateDir(__DIR__ . $this->templateDirectory);
-        $this->smarty->setCompileDir(__DIR__ . $this->templateCompileDirectory);
+        $this->smarty->setTemplateDir(__path__ . $this->templateDirectory);
+        $this->smarty->setCompileDir(__path__ . $this->templateCompileDirectory);
     }
 
     private function loadConfig()
@@ -124,12 +134,23 @@ class dsclass
         $this->imgRightBottom = $configArray['imgRightBottom'];
         $this->imgRightTop = $configArray['imgRightTop'];
         $this->imgLeftTop = $configArray['imgLeftTop'];
+        $this->strlen = $configArray['strlen'];
+        $this->count = $configArray['count'];
+    }
+    
+    
+    private function setMetadata(){
+        $this->mpdf->SetAuthor($this->author);
+        $this->mpdf->SetCreator($this->creator);
+        $this->mpdf->SetKeywords($this->keywords);
+        $this->mpdf->SetSubject($this->subject.$this->docNum);
+        $this->mpdf->SetTitle($this->title.$this->docNum);
     }
 
     private function createMPdf()
     {
         $this->mpdf = new \Mpdf\Mpdf([
-            'tempDir' => __DIR__ . $this->tempDirectory,
+            'tempDir' => __path__ . $this->tempDirectory,
             'format' => 'A4',
             'margin_left' => 10,
             'margin_right' => 10,
@@ -137,9 +158,10 @@ class dsclass
             'margin_bottom' => 10,
             'defaultPageNumStyle' => '1',
             'watermarkImgBehind' => true,
-            'fontDir' => __DIR__ . $this->fontDirectory,
+            'fontDir' => __path__ . $this->fontDirectory,
+            'default_font' => 'andada',
             'fontdata' => [
-                'gratia' => [
+                'andada' => [
                     'R' => $this->fontRegular,
                     'B' => $this->fontBold,
                     'I' => $this->fontItalic,
@@ -148,8 +170,7 @@ class dsclass
             ]
         ]);
     }
-    
-    
+
     public function generatePDF()
     {
         $this->createMPdf();
@@ -162,7 +183,7 @@ class dsclass
         $this->smarty->assign('PAGENO', '{PAGENO}');
         $this->smarty->assign('MDATE', $this->date);
 
-        $code = capitalFirstLetters($this->institution);
+        $code = capitalFirstLetters($this->institution,6,3);
 
         $this->docNum = $this->getNumber($code);
         $this->docNumShort = $this->getNumber($code, false);
@@ -200,14 +221,13 @@ class dsclass
 
     /* other functions */
     /**
-     * 
+     *
      * @param integer $left
      * @param integer $right
      * @param integer $top
      * @param integer $bottom
      * @return string rendered template output
      */
-    
     public function createPageWithMargins($left, $right, $top, $bottom)
     {
         $this->mpdf->AddPageByArray([
@@ -217,15 +237,18 @@ class dsclass
             'margin-bottom' => $bottom
         ]);
     }
+
     /**
-     * 
+     *
      * @return string rendered template output
      */
     private function getInstitution()
     {
         return $this->getInstitutionTemplate($this->institution);
     }
+
     /**
+     *
      * @param string $code
      * @param boolean $short
      * @return string rendered template output
@@ -250,6 +273,7 @@ class dsclass
         $this->smarty->assign('imgDir', $this->folderChapterPaths['imgPath']);
         return $this->smarty->fetch('dsimagestop.tpl');
     }
+
     /**
      *
      * @return string rendered template output
@@ -260,6 +284,7 @@ class dsclass
         $this->smarty->assign('imgDir', $this->folderChapterPaths['imgPath']);
         return $this->smarty->fetch('dsimagesbottom.tpl');
     }
+
     /**
      *
      * @param string $content
@@ -276,6 +301,7 @@ class dsclass
         $this->smarty->assign('barCode', $this->barCode);
         return $this->smarty->fetch('dsfooter.tpl');
     }
+
     /**
      *
      * @param string $content
@@ -286,6 +312,7 @@ class dsclass
         $this->smarty->assign('headerContent', $content);
         return $this->smarty->fetch('dsheader.tpl');
     }
+
     /**
      *
      * @param string $dataM
@@ -298,6 +325,7 @@ class dsclass
         $this->smarty->assign('dataStrings', $dataStrings);
         return $this->smarty->fetch('dsdata.tpl');
     }
+
     /**
      *
      * @param string $institution
@@ -308,6 +336,7 @@ class dsclass
         $this->smarty->assign('institution', $institution);
         return $this->smarty->fetch('dsinstitution.tpl');
     }
+
     /**
      *
      * @param string $application
@@ -318,6 +347,7 @@ class dsclass
         $this->smarty->assign('application', $application);
         return $this->smarty->fetch('dsapplication.tpl');
     }
+
     /**
      *
      * @param string $firstInfo
@@ -328,6 +358,7 @@ class dsclass
         $this->smarty->assign('firstInfo', $firstInfo);
         return $this->smarty->fetch('dsfirst-info.tpl');
     }
+
     /**
      *
      * @param array $refers
@@ -350,6 +381,7 @@ class dsclass
         $this->smarty->assign('refersTo', $refers);
         return $this->smarty->fetch('dsrefersto.tpl');
     }
+
     /**
      *
      * @param string $content
@@ -360,10 +392,9 @@ class dsclass
         $this->smarty->assign('content', $content);
         return $this->smarty->fetch('dscontenttoinstitution.tpl');
     }
-    
-    
+
     /**
-     * 
+     *
      * @param string $signature
      * @param string $signatureEnd
      * @return string rendered template output
@@ -374,9 +405,9 @@ class dsclass
         $this->smarty->assign('signatureEnd', $signatureEnd);
         return $this->smarty->fetch('dssignature.tpl');
     }
-    
+
     /**
-     * 
+     *
      * @return string rendered template output
      */
     private function getDocNumShortTemplate()
