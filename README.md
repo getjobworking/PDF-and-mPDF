@@ -18,16 +18,16 @@ and give them write permissions via the script.
 
 Usage
 
-    Configure the institution`s name and other data in the config/config.json file.
-    Run the index.php script to generate official letters with unique document numbers and barcodes.
-    You can run index.php without changing anything. The configuration file contains everything you need.
-    If you need to load data in html form, the file to be loaded is in the content/content.html folder.
+Configure the institution`s name and other data in the config/config.json file.
+Run the index.php script to generate official letters with unique document numbers and barcodes.
+You can run index.php without changing anything. The configuration file contains everything you need.
+If you need to load data in html form, the file to be loaded is in the content/content.html folder.
 
 Dependencies
 
-    mPDF: A PHP library for creating PDF documents.
-    Smarty: A template engine for PHP.
-    Free Fonts: High-quality fonts used in document generation. (included in folder /fonts)
+mPDF: A PHP library for creating PDF documents.
+Smarty: A template engine for PHP.
+Free Fonts: High-quality fonts used in document generation. (included in folder /fonts)
 
 Example PDF
 
