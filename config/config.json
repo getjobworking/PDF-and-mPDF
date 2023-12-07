@@ -29,11 +29,11 @@
   "imgRightBottom":"dtl.png",
   "imgLeftTop":"magic.png",
   "imgRightTop":"rtl-p.png",
-  "author":"Autor",
-  "creator":"Creator",
-  "keywords":"keyword1,keyword2",
-  "subject":"$this->docNum",
-  "title":"Title",
+  "author":"The Wizard of the Land of OZ",
+  "creator":"The Wizard of the Land of OZ",
+  "keywords":"Wizard,Land,OZ",
+  "subject":"The Wizard of the Land of OZ",
+  "title":"The Wizard of the Land of OZ",
   "count":"5",
   "strlen":"3"
 }

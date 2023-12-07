@@ -140,6 +140,11 @@ class dsclass
         $this->imgLeftTop = $configArray['imgLeftTop'];
         $this->strlen = $configArray['strlen'];
         $this->count = $configArray['count'];
+        $this->author = $configArray['author'];
+        $this->creator = $configArray['creator'];
+        $this->keywords = $configArray['keywords'];
+        $this->subject = $configArray['subject'];
+        $this->title = $configArray['title'];
     }
     
     
@@ -191,7 +196,7 @@ class dsclass
 
         $this->docNum = $this->getNumber($code);
         $this->docNumShort = $this->getNumber($code, false);
-
+        $this->setMetadata();
         $this->barCode = createBarCode($this->docNum);
 
         $this->mpdf->SetWatermarkImage(createImage($this->docNum), 0.2, 'F', 'F');
