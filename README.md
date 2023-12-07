@@ -23,6 +23,8 @@ Run the index.php script to generate official letters with unique document numbe
 You can run index.php without changing anything. The configuration file contains everything you need.
 If you need to load data in html form, the file to be loaded is in the content/content.html folder.
 
+In the generated PDF file, you can set the value of defined fields, a logo, 2 other images, metadata and attach the HTML file as content. The layout is based on smarty templates, so you can arrange the document in your own way and set your own css styles.
+
 Dependencies
 
 mPDF: A PHP library for creating PDF documents.
