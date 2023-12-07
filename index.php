@@ -12,6 +12,5 @@ require_once __DIR__ . '/include/barcode.php';
 require_once __DIR__ . '/include/myfunctions.php';
 require_once __DIR__ . '/include/dsclass.php';
 
-// Kod inicjalizacyjny (jeśli potrzebny tylko raz)
 $pdfGenerator = new dsclass();
 $pdfGenerator->generatePDF();
